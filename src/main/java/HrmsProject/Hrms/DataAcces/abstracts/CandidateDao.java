@@ -1,0 +1,9 @@
+package HrmsProject.Hrms.DataAcces.abstracts;
+
+import HrmsProject.Hrms.Entity.concrete.Candidate;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface CandidateDao extends JpaRepository<Candidate,Integer> {
+    Candidate findByEmail(String email);
+    Candidate findByIdentityNumber(String identityNumber);
+}
