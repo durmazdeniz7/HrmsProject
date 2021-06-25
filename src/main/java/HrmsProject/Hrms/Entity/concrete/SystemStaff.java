@@ -25,4 +25,5 @@ public class SystemStaff extends User {
     @Column(name = "role",nullable = false)
     private String role;
 
+
 }

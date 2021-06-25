@@ -36,4 +36,5 @@ public class Candidate extends User{
     @JsonFormat(pattern="yyyy-MM-dd")
     private Date dateOfBirth;
 
+
 }

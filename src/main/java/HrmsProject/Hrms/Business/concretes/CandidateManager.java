@@ -44,6 +44,9 @@ public class CandidateManager implements CandidateService {
         if (this.findByIdentityNumber(candidate.getIdentityNumber())!=null){
             return new ErrorResult("Aynı TC KİMLİK NUMARASI VAR");
         }
+        if(!userCheckService.isVerified(candidate)){
+            return new ErrorResult("Kullanıcı Doğrulanamadı");
+        }
         this.emailService.sendMailVerified(candidate.getEmail(),"123456");
         this.candidateDao.save(candidate);
         return new SuccesResult("Eklendi");
