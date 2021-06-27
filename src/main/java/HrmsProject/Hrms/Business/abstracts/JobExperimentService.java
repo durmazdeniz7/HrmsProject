@@ -9,4 +9,5 @@ import java.util.List;
 public interface JobExperimentService {
     Result  add(JobExperiment jobExperiment);
     DataResult<List<JobExperiment>> getall();
+    DataResult<List<JobExperiment>> getallSorted();
 }

@@ -9,4 +9,5 @@ import java.util.List;
 public interface SchoolService {
     Result add(School school);
     DataResult<List<School>> getall();
+    DataResult<List<School>> getallSorted();
 }

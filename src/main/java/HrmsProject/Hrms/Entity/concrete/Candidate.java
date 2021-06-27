@@ -1,6 +1,7 @@
 package HrmsProject.Hrms.Entity.concrete;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -34,6 +35,7 @@ public class Candidate extends User{
     @JsonFormat(pattern="yyyy-MM-dd")
     private Date dateOfBirth;
 
+    @JsonManagedReference
    @OneToMany(mappedBy = "candidate")
     private List<CvTable> cvTables;
 

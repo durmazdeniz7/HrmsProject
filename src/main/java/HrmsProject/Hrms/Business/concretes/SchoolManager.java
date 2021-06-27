@@ -8,6 +8,7 @@ import HrmsProject.Hrms.Core.utilities.result.SuccesResult;
 import HrmsProject.Hrms.DataAcces.abstracts.SchoolDao;
 import HrmsProject.Hrms.Entity.concrete.School;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -30,5 +31,11 @@ public class SchoolManager implements SchoolService {
     @Override
     public DataResult<List<School>> getall() {
         return new SuccesDataResult<List<School>>(this.schoolDao.findAll(),"Okullar Listelendi");
+    }
+
+    @Override
+    public DataResult<List<School>> getallSorted() {
+        Sort sort=Sort.by(Sort.Direction.DESC,"endDate");
+        return new SuccesDataResult<List<School>>(this.schoolDao.findAll(sort),"Başarılı");
     }
 }

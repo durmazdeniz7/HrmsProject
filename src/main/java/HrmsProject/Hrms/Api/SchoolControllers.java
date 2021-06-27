@@ -28,4 +28,9 @@ public class SchoolControllers {
     public Result add(School school){
         return this.schoolService.add(school);
     }
+
+    @RequestMapping("/getallSorted")
+    public DataResult<List<School>> getallSorted(){
+        return this.schoolService.getallSorted();
+    }
 }

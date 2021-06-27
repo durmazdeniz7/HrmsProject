@@ -8,6 +8,7 @@ import HrmsProject.Hrms.Core.utilities.result.SuccesResult;
 import HrmsProject.Hrms.DataAcces.abstracts.JobExperimentDao;
 import HrmsProject.Hrms.Entity.concrete.JobExperiment;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -32,5 +33,11 @@ public class JobExperimentManager implements JobExperimentService {
     public DataResult<List<JobExperiment>> getall() {
 
         return new SuccesDataResult<List<JobExperiment>>(jobExperimentDao.findAll(), "Listelendi");
+    }
+
+    @Override
+    public DataResult<List<JobExperiment>> getallSorted() {
+        Sort sort=Sort.by(Sort.Direction.DESC,"finishDate");
+        return new SuccesDataResult<List<JobExperiment>>(this.jobExperimentDao.findAll(sort));
     }
 }

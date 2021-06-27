@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import javax.xml.crypto.Data;
 import java.util.List;
 
 @RestController
@@ -28,5 +27,10 @@ public class JobExperimentControllers {
     @RequestMapping("/getall")
     public DataResult<List<JobExperiment>>getall(){
         return this.jobExperimentService.getall();
+    }
+
+    @RequestMapping("/getallsorted")
+    public DataResult<List<JobExperiment>> getallSorted(){
+        return this.jobExperimentService.getallSorted();
     }
 }
