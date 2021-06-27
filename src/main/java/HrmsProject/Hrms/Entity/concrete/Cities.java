@@ -4,6 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name = "cities")
@@ -17,4 +18,7 @@ public class Cities {
 
     @Column(name = "city_name",nullable = false)
     private String cityName;
+
+    @OneToMany(mappedBy = "cities")
+    private List<JobPosting> jobPostings;
 }

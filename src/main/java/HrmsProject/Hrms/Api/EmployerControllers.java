@@ -33,8 +33,5 @@ public class EmployerControllers {
     public DataResult<List<Employer>> getall(){
     return this.employerService.getall();
     }
-    @RequestMapping("/getcity")
-    public DataResult<List<Cities>> getCity(){
-    return this.citiesService.getall();
-    }
+
 }
