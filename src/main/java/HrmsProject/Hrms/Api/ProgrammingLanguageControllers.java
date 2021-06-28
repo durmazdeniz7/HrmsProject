@@ -7,6 +7,7 @@ import HrmsProject.Hrms.Entity.concrete.ProgrammingLanguage;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
@@ -21,7 +22,7 @@ public class ProgrammingLanguageControllers {
 
     }
     @PostMapping("/add")
-    public Result add(ProgrammingLanguage programmingLanguage){
+    public Result add(@RequestParam ProgrammingLanguage programmingLanguage){
       return this.programmingLanguageService.add(programmingLanguage);
     }
     @RequestMapping("/getall")
