@@ -9,5 +9,7 @@ import java.util.List;
 public interface UserService {
     Result add(User user);
     DataResult<List<User>> getall();
+    User findByEmail(String email);
+
 
 }

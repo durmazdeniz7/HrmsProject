@@ -5,6 +5,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Data
 @AllArgsConstructor
@@ -19,4 +20,7 @@ public class JobPosition {
 
     @Column(name = "job_name",nullable = false)
     private String jobName;
+
+    @OneToMany(mappedBy = "jobPosition")
+    private List<JobPosting> jobPostings;
 }

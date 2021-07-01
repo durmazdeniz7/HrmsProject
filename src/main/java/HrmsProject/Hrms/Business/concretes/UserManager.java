@@ -1,10 +1,7 @@
 package HrmsProject.Hrms.Business.concretes;
 
 import HrmsProject.Hrms.Business.abstracts.UserService;
-import HrmsProject.Hrms.Core.utilities.result.DataResult;
-import HrmsProject.Hrms.Core.utilities.result.Result;
-import HrmsProject.Hrms.Core.utilities.result.SuccesDataResult;
-import HrmsProject.Hrms.Core.utilities.result.SuccesResult;
+import HrmsProject.Hrms.Core.utilities.result.*;
 import HrmsProject.Hrms.DataAcces.abstracts.UserDao;
 import HrmsProject.Hrms.Entity.concrete.User;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,6 +19,9 @@ public class UserManager implements UserService {
 
     @Override
     public Result add(User user) {
+        if(this.findByEmail(user.getEmail())!=null){
+            return  new ErrorResult("Aynı Email Var");
+        }
         this.userDao.save(user);
         return new SuccesResult("Kullanıcı Eklendi");
     }
@@ -29,5 +29,10 @@ public class UserManager implements UserService {
     @Override
     public DataResult<List<User>> getall() {
         return new SuccesDataResult<List<User>>(this.userDao.findAll(),"Listelendi");
+    }
+
+    @Override
+    public User findByEmail(String email) {
+        return  this.userDao.findByEmail(email);
     }
 }

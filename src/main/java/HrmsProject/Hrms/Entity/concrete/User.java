@@ -36,4 +36,7 @@ public class User {
     @Size(min = 8,max = 32)
     private  String passwordRepeat;
 
+    @Column(name = "email_valid",nullable = false)
+    private boolean emailValid;
+
 }

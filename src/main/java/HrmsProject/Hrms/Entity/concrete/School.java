@@ -10,7 +10,6 @@ import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
-import java.time.LocalDate;
 import java.util.Date;
 
 @Entity
@@ -32,18 +31,21 @@ public class School {
     @Column(name = "department",nullable = false)
     private String department;
 
-    @DateTimeFormat(pattern = "MM-dd-yyyy")
+    @DateTimeFormat(iso = DateTimeFormat.ISO.DATE)
+    @JsonFormat(pattern = "dd/MM/yyyy")
     @Column(name = "start_date",nullable = false)
     private Date startDate;
 
-    @DateTimeFormat(pattern = "MM-dd-yyyy")
+
     @Column(name = "end_date")
+    @DateTimeFormat(iso = DateTimeFormat.ISO.DATE)
+    @JsonFormat(pattern = "dd/MM/yyyy")
     private Date endDate;
 
     @DateTimeFormat(iso = DateTimeFormat.ISO.DATE)
     @JsonFormat(pattern = "dd/MM/yyyy")
     @Column(name = "create_date")
-    private LocalDate createDate;
+    private Date createDate;
 
     @JsonBackReference
     @ManyToOne()

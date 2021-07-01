@@ -33,4 +33,7 @@ public class Employer extends User{
 
     @OneToMany(mappedBy = "employer")
     private List<JobPosting> jobPostings;
+
+    @OneToOne(mappedBy = "employer")
+    private Cities cities;
 }

@@ -31,6 +31,6 @@ public class SchoolControllers {
 
     @RequestMapping("/getallSorted")
     public DataResult<List<School>> getallSorted(){
-        return this.schoolService.getallSorted();
-    }
+        return this.schoolService.getallSorted(); }
+
 }

@@ -21,4 +21,9 @@ public class Cities {
 
     @OneToMany(mappedBy = "cities")
     private List<JobPosting> jobPostings;
+
+
+    @OneToOne()
+    @JoinColumn(name = "employer_id")
+    private Employer employer;
 }
