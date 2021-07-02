@@ -7,6 +7,7 @@ import HrmsProject.Hrms.Core.utilities.result.SuccesDataResult;
 import HrmsProject.Hrms.Core.utilities.result.SuccesResult;
 import HrmsProject.Hrms.DataAcces.abstracts.JobPostingDao;
 import HrmsProject.Hrms.Entity.concrete.JobPosting;
+import HrmsProject.Hrms.Entity.concrete.dtos.EmployerWithJobPosting;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -31,5 +32,10 @@ public class JobPostingManager implements JobPostingService {
     @Override
     public DataResult<List<JobPosting>> getall() {
         return new SuccesDataResult<List<JobPosting>>(this.jobPostingDao.findAll(),"Listelendi");
+    }
+
+    @Override
+    public DataResult<List<EmployerWithJobPosting>> getByEmployerWithJobPosting() {
+        return new SuccesDataResult<List<EmployerWithJobPosting>>(this.jobPostingDao.getByEmployerWithJobPosting());
     }
 }

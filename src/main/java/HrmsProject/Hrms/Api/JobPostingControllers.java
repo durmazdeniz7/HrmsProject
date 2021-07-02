@@ -4,6 +4,7 @@ import HrmsProject.Hrms.Business.abstracts.JobPostingService;
 import HrmsProject.Hrms.Core.utilities.result.DataResult;
 import HrmsProject.Hrms.Core.utilities.result.Result;
 import HrmsProject.Hrms.Entity.concrete.JobPosting;
+import HrmsProject.Hrms.Entity.concrete.dtos.EmployerWithJobPosting;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -28,5 +29,9 @@ public class JobPostingControllers {
     @RequestMapping("/getall")
     public DataResult<List<JobPosting>> getall(){
         return this.jobPostingService.getall();
+    }
+    @RequestMapping("/getByEmployerWithJobPosting")
+    public DataResult<List<EmployerWithJobPosting>> getByEmployerWithJobPosting(){
+        return  this.jobPostingService.getByEmployerWithJobPosting();
     }
 }
