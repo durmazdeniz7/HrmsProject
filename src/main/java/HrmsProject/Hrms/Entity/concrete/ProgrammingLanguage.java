@@ -18,7 +18,7 @@ public class ProgrammingLanguage {
     private int id;
 
     @Column(name = "name",nullable = false)
-    private String name;
+    private String programingName;
 
     @ManyToOne()
     @JoinColumn(name = "cvTable_id")

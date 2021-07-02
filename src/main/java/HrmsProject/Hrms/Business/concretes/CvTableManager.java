@@ -32,4 +32,12 @@ private CvTableDao cvTableDao;
     public DataResult<List<CvTable>> getall() {
         return new SuccesDataResult<List<CvTable>>(this.cvTableDao.findAll(),"Listelendi");
     }
+
+    /*
+    @Override
+    public DataResult<List<CandidateWithCvTable>> getByCandidateWithCvTable() {
+        return new SuccesDataResult<List<CandidateWithCvTable>>(this.cvTableDao.getByCandidateWithCvTable(),"Listelendi");
+    }
+
+     */
 }

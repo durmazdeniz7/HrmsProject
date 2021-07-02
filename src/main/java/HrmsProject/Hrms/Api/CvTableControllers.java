@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-@RequestMapping(name="/api/cv_table")
+@RequestMapping(name = "/api/cv_table")
 public class CvTableControllers {
     private CvTableService cvTableService;
 
@@ -28,7 +28,15 @@ public class CvTableControllers {
     }
 
     @RequestMapping("/getall")
-public DataResult<List<CvTable>> getall(){
+    public DataResult<List<CvTable>> getall() {
         return this.cvTableService.getall();
     }
+
+    /*
+    @RequestMapping("/getByCandidateWithCvTable")
+    public DataResult<List<CandidateWithCvTable>> getByCandidateWithCvTable() {
+        return this.cvTableService.getByCandidateWithCvTable();
+    }
+
+     */
 }

@@ -9,5 +9,8 @@ import java.util.List;
 public interface CvTableService {
     Result add(CvTable cvTable);
     DataResult<List<CvTable>> getall();
+    /*
+    DataResult<List<CandidateWithCvTable>> getByCandidateWithCvTable();
 
+     */
 }
