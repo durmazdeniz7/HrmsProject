@@ -10,7 +10,7 @@ import java.util.Date;
 @NoArgsConstructor
 public class EmployerWithJobPosting {
    private int id;
-    private String companyName;
+   private String jobName;
     private int openPosition;
     private Date publishDate;
     private Date endApplyDate;

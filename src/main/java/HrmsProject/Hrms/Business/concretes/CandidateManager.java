@@ -56,4 +56,10 @@ public class CandidateManager implements CandidateService {
     public DataResult<List<Candidate>> getall() {
         return new SuccesDataResult<List<Candidate>>(this.candidateDao.findAll(),"Listelendi");
     }
+
+    @Override
+    public DataResult<List<Candidate>> getByCandidateName(String firstName) {
+
+        return new SuccesDataResult<>(this.candidateDao.getByCandidateName(firstName));
+    }
 }

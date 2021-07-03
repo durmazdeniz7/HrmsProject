@@ -38,4 +38,9 @@ public class JobPostingManager implements JobPostingService {
     public DataResult<List<EmployerWithJobPosting>> getByEmployerWithJobPosting() {
         return new SuccesDataResult<List<EmployerWithJobPosting>>(this.jobPostingDao.getByEmployerWithJobPosting());
     }
+
+    @Override
+    public DataResult<List<JobPosting>> getByActiveJobWithCompanyName(String companyName) {
+        return new SuccesDataResult<List<JobPosting>>(this.jobPostingDao.getByActiveJobWithCompanyName(companyName));
+    }
 }

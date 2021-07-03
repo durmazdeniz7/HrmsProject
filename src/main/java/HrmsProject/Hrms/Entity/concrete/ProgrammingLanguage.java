@@ -18,6 +18,8 @@ public class ProgrammingLanguage {
     private int id;
 
     @Column(name = "name",nullable = false)
+   // @NotBlank()
+    //@NotEmpty()
     private String programingName;
 
     @ManyToOne()

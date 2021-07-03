@@ -34,4 +34,9 @@ public class JobPostingControllers {
     public DataResult<List<EmployerWithJobPosting>> getByEmployerWithJobPosting(){
         return  this.jobPostingService.getByEmployerWithJobPosting();
     }
+
+    @RequestMapping("/getByActiveJob")
+    public DataResult<List<JobPosting>>  getByActiveJob(String companyName){
+        return this.jobPostingService.getByActiveJobWithCompanyName(companyName);
+    }
 }

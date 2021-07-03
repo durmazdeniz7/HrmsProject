@@ -11,4 +11,5 @@ public interface JobPostingService {
     Result add(JobPosting jobPosting);
     DataResult<List<JobPosting>> getall();
     DataResult<List<EmployerWithJobPosting>> getByEmployerWithJobPosting();
+    DataResult<List<JobPosting>>  getByActiveJobWithCompanyName(String companyName);
 }

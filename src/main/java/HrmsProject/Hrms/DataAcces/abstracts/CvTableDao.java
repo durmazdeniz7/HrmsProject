@@ -11,7 +11,7 @@ public interface CvTableDao extends JpaRepository<CvTable,Integer> {
 
     @Query("Select new HrmsProject.Hrms.Entity.concrete.dtos.CandidateWithCvTable" +
             "(c.id,c.firstName,c.lastName,cv.photoLink,cv.githubLink,cv.linkedinLink," +
-            "cv.description) " +
+            "cv.description,cv.createDate) " +
             "From Candidate c Inner Join c.cvTables cv ")
     List<CandidateWithCvTable> getByCandidateWithCvTable();
 

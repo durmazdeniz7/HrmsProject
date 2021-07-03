@@ -14,4 +14,5 @@ public interface CandidateService {
     Result add(Candidate candidate);
 
     DataResult<List<Candidate>> getall();
+    DataResult<List<Candidate>> getByCandidateName(String firstName);
 }
