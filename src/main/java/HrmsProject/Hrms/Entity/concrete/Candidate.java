@@ -24,23 +24,23 @@ import java.util.List;
 @NoArgsConstructor
 public class Candidate extends User {
     @Column(name = "first_name", nullable = false)
-    @NotBlank
+    @NotBlank()
     @NotEmpty(message = "Adı Giriniz Lütfen")
     private String firstName;
 
     @Column(name = "last_name", nullable = false)
-    @NotBlank
+    @NotBlank()
     @NotEmpty(message = "Soyadı Giriniz Lütfen")
     private String lastName;
 
     @Column(name = "identity_number", nullable = false)
     @NotEmpty(message = "TC kimlik Numarası Giriniz Lütfen")
-    @NotBlank
+    @NotBlank()
     @Size(min = 11,max = 11,message = "Lütfen 11 Haneli Tc Kimlik Numararınızı Giriniz")
     private String identityNumber;
 
     @Column(name = "date_of_birth", nullable = false)
-    @NotBlank
+    @NotBlank()
     @NotEmpty(message = "Doğum Tarihi Giriniz Lütfen")
     @DateTimeFormat(iso = DateTimeFormat.ISO.DATE)
     @JsonFormat(pattern = "dd/MM/yyyy")

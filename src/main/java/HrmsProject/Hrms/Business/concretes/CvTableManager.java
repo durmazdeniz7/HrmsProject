@@ -7,6 +7,7 @@ import HrmsProject.Hrms.Core.utilities.result.SuccesDataResult;
 import HrmsProject.Hrms.Core.utilities.result.SuccesResult;
 import HrmsProject.Hrms.DataAcces.abstracts.CvTableDao;
 import HrmsProject.Hrms.Entity.concrete.CvTable;
+import HrmsProject.Hrms.Entity.concrete.dtos.CandidateWithCvTable;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -33,11 +34,11 @@ private CvTableDao cvTableDao;
         return new SuccesDataResult<List<CvTable>>(this.cvTableDao.findAll(),"Listelendi");
     }
 
-    /*
+
     @Override
     public DataResult<List<CandidateWithCvTable>> getByCandidateWithCvTable() {
         return new SuccesDataResult<List<CandidateWithCvTable>>(this.cvTableDao.getByCandidateWithCvTable(),"Listelendi");
     }
 
-     */
+
 }

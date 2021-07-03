@@ -4,6 +4,7 @@ import HrmsProject.Hrms.Business.abstracts.CvTableService;
 import HrmsProject.Hrms.Core.utilities.result.DataResult;
 import HrmsProject.Hrms.Core.utilities.result.Result;
 import HrmsProject.Hrms.Entity.concrete.CvTable;
+import HrmsProject.Hrms.Entity.concrete.dtos.CandidateWithCvTable;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -32,11 +33,11 @@ public class CvTableControllers {
         return this.cvTableService.getall();
     }
 
-    /*
+
     @RequestMapping("/getByCandidateWithCvTable")
     public DataResult<List<CandidateWithCvTable>> getByCandidateWithCvTable() {
         return this.cvTableService.getByCandidateWithCvTable();
     }
 
-     */
+
 }

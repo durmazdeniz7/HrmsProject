@@ -4,13 +4,11 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.time.LocalDate;
-import java.util.Date;
-
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 public class CandidateWithCvTable {
+
     private int id;
     private String firstName;
     private String lastName;
@@ -18,6 +16,8 @@ public class CandidateWithCvTable {
     private String githubLink;
     private String linkedinLink;
     private String description;
+
+    /*
     private String createDate;
     private String schoolName;
     private String department;
@@ -30,6 +30,8 @@ public class CandidateWithCvTable {
     private LocalDate startedDate;
     private LocalDate finishDate;
     private String programingName;
+
+     */
 
 
 }
