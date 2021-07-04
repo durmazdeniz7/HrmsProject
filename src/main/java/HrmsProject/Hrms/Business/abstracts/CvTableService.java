@@ -11,7 +11,7 @@ public interface CvTableService {
     Result add(CvTable cvTable);
     DataResult<List<CvTable>> getall();
 
-    DataResult<List<CandidateWithCvTable>> getByCandidateWithCvTable();
+    DataResult<List<CandidateWithCvTable>> getByCandidateWithCvTable(int id);
 
 
 }

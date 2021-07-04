@@ -8,10 +8,12 @@ import java.util.Date;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class EmployerWithJobPosting {
-   private int id;
-   private String jobName;
+public class JobRequirement {
+    private int id;
+    private boolean isActive;
+    private String companyName;
+    private String jobName;
     private int openPosition;
-    private Date publishDate;
+    private Date publishingDate;
     private Date endApplyDate;
 }

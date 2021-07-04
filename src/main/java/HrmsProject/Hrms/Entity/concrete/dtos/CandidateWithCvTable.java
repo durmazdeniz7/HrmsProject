@@ -12,7 +12,6 @@ import java.util.Date;
 public class CandidateWithCvTable {
 
     private int id;
-    //private int cvTableId;
     private String firstName;
     private String lastName;
     private  String photoLink;
@@ -20,9 +19,6 @@ public class CandidateWithCvTable {
     private String linkedinLink;
     private String description;
     private Date createDate;
-
-    /*
-    private String createDate;
     private String schoolName;
     private String department;
     private Date startDate;
@@ -31,10 +27,10 @@ public class CandidateWithCvTable {
     private int level;
     private String workplaceName;
     private String position;
-    private LocalDate startedDate;
-    private LocalDate finishDate;
+    private Date startedDate;
+    private Date finishDate;
     private String programingName;
-     */
+
 
 
 }

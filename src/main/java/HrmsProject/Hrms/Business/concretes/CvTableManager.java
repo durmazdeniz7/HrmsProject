@@ -36,8 +36,8 @@ private CvTableDao cvTableDao;
 
 
     @Override
-    public DataResult<List<CandidateWithCvTable>> getByCandidateWithCvTable() {
-        return new SuccesDataResult<List<CandidateWithCvTable>>(this.cvTableDao.getByCandidateWithCvTable(),"Listelendi");
+    public DataResult<List<CandidateWithCvTable>> getByCandidateWithCvTable(int id) {
+        return new SuccesDataResult<List<CandidateWithCvTable>>(this.cvTableDao.getByCandidateWithCvTable(id),"Listelendi");
     }
 
 

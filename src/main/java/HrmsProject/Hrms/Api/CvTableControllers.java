@@ -35,8 +35,8 @@ public class CvTableControllers {
 
 
     @RequestMapping("/getByCandidateWithCvTable")
-    public DataResult<List<CandidateWithCvTable>> getByCandidateWithCvTable() {
-        return this.cvTableService.getByCandidateWithCvTable();
+    public DataResult<List<CandidateWithCvTable>> getByCandidateWithCvTable(int id) {
+        return this.cvTableService.getByCandidateWithCvTable(id);
     }
 
 

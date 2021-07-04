@@ -7,7 +7,7 @@ import lombok.NoArgsConstructor;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
-import java.time.LocalDate;
+import java.util.Date;
 
 @Data
 @AllArgsConstructor
@@ -30,12 +30,12 @@ public class JobExperiment {
     @DateTimeFormat(iso = DateTimeFormat.ISO.DATE)
     @JsonFormat(pattern = "dd/MM/yyyy")
     @Column(name = "started_date",nullable = false)
-    private LocalDate startedDate;
+    private Date startedDate;
 
     @DateTimeFormat(iso = DateTimeFormat.ISO.DATE)
     @JsonFormat(pattern = "dd/MM/yyyy")
     @Column(name = "finish_date")
-    private LocalDate finishDate;
+    private Date finishDate;
 
     @ManyToOne()
     @JoinColumn(name = "cvTable_id")
